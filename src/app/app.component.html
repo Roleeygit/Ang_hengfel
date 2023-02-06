@@ -1,0 +1,46 @@
+<!-- 
+* File: app.component.html
+* Author: Juhász Roland
+* Copyright: 2023, Juhász Roland
+* Group: Szoft II N
+* Date: 2023-02-06
+* Github: https://github.com/Roleeygit
+* Licenc: GNU GPL
+-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Főoldal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about" routerLinkActive="active">Készitő</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="github" routerLinkActive="active">Github</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container mt-5 text-center">
+  <h2 class="">A kör alapú henger felszínének számítása</h2>
+  <form [formGroup]="surfaceAreaForm">
+    <div class="form-group">
+      <label for="radius">Sugár:</label>
+      <input type="number" class="form-control" id="radius" formControlName="radius">
+    </div>
+    <div class="form-group">
+      <label for="height">Hossz:</label>
+      <input type="number" class="form-control" id="height" formControlName="height">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="calculateSurfaceArea()" [disabled]="surfaceAreaForm.invalid">Számit</button>
+    <a type="submit" class="btn btn-primary" href="/">Frissit</a>
+  </form>
+  <div *ngIf="surfaceArea" class="form-group mt-3">
+    <label for="result">A henger felszíne:</label>
+    <input type="text" class="form-control" id="result" [value]="surfaceArea" readonly>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
