@@ -1,0 +1,10 @@
+.github svg {
+    fill: black;
+    
+    transition: fill 0.2s ease;
+  }
+  
+  .github:hover svg {
+    fill: rgb(73, 70, 70);
+    
+  }

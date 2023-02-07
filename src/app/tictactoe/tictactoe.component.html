@@ -1,0 +1,31 @@
+<!-- 
+* File: tictactoe.component.html
+* Author: Juhász Roland
+* Copyright: 2023, Juhász Roland
+* Group: Szoft II N
+* Date: 2023-02-07
+* Github: https://github.com/Roleeygit
+* Licenc: GNU GPL
+-->
+
+<div class="container mt-3 " >
+    <table class="player-table">
+      <tr>
+        <td class="player-one">Player 1: X</td>
+        <td class="player-two">Player 2: O</td>
+      </tr>
+      <tr>
+        <td class="player-one-score">Score: <span id="playerOneScore">{{playerOneScore}}</span></td>
+<td class="player-two-score">Score: <span id="playerTwoScore">{{playerTwoScore}}</span></td>
+
+      </tr>
+    </table>
+    <table class="game-table mt-3">
+      <tr *ngFor="let row of [0, 1, 2]">
+        <td *ngFor="let col of [0, 1, 2]" (click)="clickCell(row, col)">
+          {{grid[row][col]}}
+        </td>
+      </tr>
+    </table>
+  </div>
+  

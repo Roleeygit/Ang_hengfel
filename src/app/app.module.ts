@@ -17,13 +17,19 @@ import { AboutComponent } from './about/about.component';
 import { GithubComponent } from './github/github.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskComponent } from './task/task.component';
+import { CopyrightComponent } from './copyright/copyright.component';
+import { LoginComponent } from './login/login.component';
+import { TictactoeComponent } from './tictactoe/tictactoe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     GithubComponent,
-    TaskComponent
+    TaskComponent,
+    CopyrightComponent,
+    LoginComponent,
+    TictactoeComponent
   ],
   imports: [
     BrowserModule,

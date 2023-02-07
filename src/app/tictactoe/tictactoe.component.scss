@@ -1,0 +1,53 @@
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+    td {
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #000000;
+      
+      &:hover {
+        background-color: #eee;
+        cursor: pointer;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .player-table {
+      border-collapse: collapse;
+      td {
+        padding: 10px;
+      }
+      .player-one {
+        border-right: 1px solid black;
+        text-align: center;
+      }
+      .player-two {
+        text-align: center;
+      }
+      .player-one-score {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        text-align: center;
+      }
+      .player-two-score {
+        border-top: 1px solid black;
+        text-align: center;
+      }
+    }
+    .game-table {
+      border-collapse: collapse;
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+      }
+    }
+  }
+  

@@ -8,6 +8,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-task',
@@ -15,11 +16,49 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-
+  surfaceAreaForm!: FormGroup;
+  surfaceArea!: number;
+  countdown = 5;
   link = "https://szit.hu/doku.php?id=oktatas:programozas:feladatok:altalanos#feladat_0318";
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.surfaceAreaForm = new FormGroup({
+      radius: new FormControl(0),
+      height: new FormControl(0),
+      });
   }
+
+  startCountdown() 
+  {
+    const intervalId = setInterval(() => 
+    {
+      if (this.countdown === 0) 
+      {
+        clearInterval(intervalId);
+        window.confirm("Oldal frissítve!");
+        window.location.reload();
+      }
+        this.countdown--;
+      }, 1000);
+  }
+
+  calculateSurfaceArea() 
+  {
+    const { radius, height } = this.surfaceAreaForm.value;
+    this.surfaceArea = 2 * Math.PI * radius * (radius + height);
+    this.startCountdown();
+  }
+
+  onKeyup(event: any) 
+  {
+    if (event.key === 'Enter') 
+    {
+      
+    }
+  }
+
 
 }
