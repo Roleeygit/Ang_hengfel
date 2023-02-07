@@ -16,12 +16,14 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { GithubComponent } from './github/github.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    GithubComponent
+    GithubComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

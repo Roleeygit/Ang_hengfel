@@ -10,11 +10,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { GithubComponent } from './github/github.component';
+import { TaskComponent } from './task/task.component';
 
 const routes: Routes = 
 [
   {path: "about", component: AboutComponent},
-  {path: "github", component: GithubComponent}
+  {path: "github", component: GithubComponent},
+  {path: "task", component:TaskComponent}
 ];
 
 @NgModule({
