@@ -1,0 +1,20 @@
+// * File: github.component.scss
+// * Author: Juhász Roland
+// * Copyright: 2023, Juhász Roland
+// * Group: Szoft II N
+// * Date: 2023-02-06_07
+// * Github: https://github.com/Roleeygit
+// * Licenc: GNU GPL
+
+
+.github svg {
+    fill: black;
+    
+    transition: fill 0.2s ease;
+  }
+  
+  .github:hover svg {
+    fill: rgb(73, 70, 70);
+    
+  }
+  

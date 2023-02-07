@@ -2,7 +2,7 @@
 // * Author: Juhász Roland
 // * Copyright: 2023, Juhász Roland
 // * Group: Szoft II N
-// * Date: 2023-02-06
+// * Date: 2023-02-06_07
 // * Github: https://github.com/Roleeygit
 // * Licenc: GNU GPL
 
@@ -21,6 +21,6 @@ export class AboutComponent implements OnInit {
   }
     name = 'Juhász Roland'; 
     class = 'Szoft II N';
-    date = '2023-02-06';
+    date = '2023-02-06_07';
 
 }

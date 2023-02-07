@@ -1,0 +1,32 @@
+// * File: app.component.scss
+// * Author: Juhász Roland
+// * Copyright: 2023, Juhász Roland
+// * Group: Szoft II N
+// * Date: 2023-02-06_07
+// * Github: https://github.com/Roleeygit
+// * Licenc: GNU GPL
+
+
+.navbar {
+    background-color: #343a40;
+  
+    .nav-item {
+      a {
+        color: #fff;
+  
+        &:hover {
+          color: #298df0;
+        }
+      }
+    }
+  }
+
+  textarea:focus,
+  input[type="number"]:focus,
+  .uneditable-input:focus {
+    border-color: #343a40;
+    box-shadow: 0 0 0.7rem 0.2rem #000000;
+    outline: 0;
+  }
+  
+  
