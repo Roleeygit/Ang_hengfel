@@ -27,7 +27,7 @@ export class TaskComponent implements OnInit {
   {
     this.surfaceAreaForm = new FormGroup({
       radius: new FormControl(0),
-      height: new FormControl(0),
+      lenght: new FormControl(0),
       });
   }
 
@@ -47,8 +47,8 @@ export class TaskComponent implements OnInit {
 
   calculateSurfaceArea() 
   {
-    const { radius, height } = this.surfaceAreaForm.value;
-    this.surfaceArea = 2 * Math.PI * radius * (radius + height);
+    const { radius, lenght } = this.surfaceAreaForm.value;
+    this.surfaceArea = 2 * Math.PI * radius * (radius + lenght);
     this.startCountdown();
   }
 
